@@ -3,7 +3,7 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title>Cool Shoes - Home</title>
+		<title>Cool Shoes - Cart</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		
 		
@@ -265,6 +265,42 @@ footer .social a img{
     color: #000;
 }</style>
 
+        <!-- cart.css -->
+<style>#cart-details .product{
+    display: grid;
+    grid-template-columns: 150px auto;
+    grid-column-gap: 20px;
+    border-bottom: 1px solid #cecece;
+    padding: 20px 0;
+}
+
+#cart-details .desc{
+    color:#777;
+}
+
+#cart-details .product img{
+    width: 100%;
+}
+
+#cart-details .desc,
+#cart-details .price{
+    margin-bottom: 20px;
+}
+
+#cart-total{
+    text-align: right;
+    padding: 10px 0;
+    vertical-align: top;
+    font-size: 20px;
+}
+#cart-total span{
+    font-weight: bold;
+    font-size: 30px;
+    vertical-align: top;
+    margin-left: 4px;
+    margin-top: -4px;
+    display: inline-block;
+}</style>
 	
         
 	</head>
@@ -296,36 +332,23 @@ footer .social a img{
     </div>
 </header>
         <main>
-
-            <div class="hero-banner">
-                <div class="content">
-                    <div class="banner banner-1">
-                    </div>                
-                    <div class="text">
-                        <h1>the <span class="emph">COOLEST</span> shoes</h1>
-                        on the internet
-                    </div>
-                </div>
-            </div>            
-            <div class="hero-banner">
-                <div class="content">
-                    <div class="text">
-                        <h3 style="text-align: right">what are you waiting for? <a href="plp.html"><span class="emph">SHOP NOW!</span></a></h3>
-                    </div>
-                    <div class="banner banner-2">
-                    </div>
-                </div>
-            </div> 
-            <div class="hero-banner">
-                <div class="content">
-                    <div class="text" style="background:#cf4436; padding-right: 20px;">
-                        <h3 style="text-align: right;  color: #FFF !important; font-style: italic;"><span class="emph">Free shipping!</span></h3>
-                    </div>
-                    <div class="text">
-                        <h3 style="text-align: left; color:#333;">for orders over 50 €</h3>
-                    </div>
-                </div>
-            </div>                        
+            <div id="page-title">
+                <h1>Cart</h1>
+            </div>
+            <div id="cart-details">
+            </div>
+            <div id="cart-total">
+                Total: <span>369,8 €</span>
+            </div>
+            <script type="text/javascript">
+                $.ajax({
+                    url: "/h5/cartdetails?products=lebron8spacejam|arimax95essential",
+                    success: function(data){
+                        var $response = $("<div></div>").html(data);
+                        $("#cart-details").html($response.find("#cart-details").html());
+                    }
+                })
+            </script>
         </main>
         <footer>
     <p class="disclaimer">
