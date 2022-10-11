@@ -47,4 +47,4 @@ jobs:
     - name: curl
       uses: wei/curl@master
       with:
-        args: 'curl -X POST "https://api-aqa.usablenet.com/v2.1/demous/a11y/tests/create" -H "Accept: application/json" -H "X-Team: 0@zG02a-UW9728eU-+3aN9YN2cN4hMb802NNNh12aj$FyzNYF1e^0_11" -H "Content-Type: application/x-www-form-urlencoded" -d "projectid=TS15517&rulesetid=wcag21auto&description=descritp&partid=%2CT117275"'
+        args: '-X POST "https://api-aqa.usablenet.com/v2.1/demous/a11y/tests/create" -H "Accept: application/json" -H "X-Team: 0@zG02a-UW9728eU-+3aN9YN2cN4hMb802NNNh12aj$FyzNYF1e^0_11" -H "Content-Type: application/x-www-form-urlencoded" -d "projectid=TS15517&rulesetid=wcag21auto&description=descritp&partid=%2CT117275"'
