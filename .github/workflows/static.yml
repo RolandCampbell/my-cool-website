@@ -50,4 +50,4 @@ jobs:
     - name: curl
       uses: wei/curl@v1
       with:
-        args:  curl -X POST https://api-aqa.usablenet.com/v2.1/demous/a11y/tests/create  -H X-Team: 0@zG02a-UW9728eU-+3aN9YN2cN4hMb802NNNh12aj$FyzNYF1e^0_11 -H Content-Type: application/x-www-form-urlencoded" -d projectid=TS258&rulesetid=wcag21auto&description=descritp&partid=T128094
+        args:  curl -X POST https://api-aqa.usablenet.com/v2.1/demous/a11y/tests/create  -H X-Team: 0@zG02a-UW9728eU-+3aN9YN2cN4hMb802NNNh12aj$FyzNYF1e^0_11 -H Content-Type: application/x-www-form-urlencoded -d projectid=TS258&rulesetid=wcag21auto&description=descritp&partid=T128094
