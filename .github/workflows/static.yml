@@ -70,11 +70,7 @@ jobs:
           # Params can be passed through with a json object string
           params: '{ "projectid": "TS258", "rulesetid": "wcag21auto", "description": "description", "partid", "T128094 }'
 
-          # Body request
-          # Apply only to POST|PUT request
-          body: '{ "name": "breeze",  "job": "devops" }'
-
-          # Request timeout (millisec)
+                   # Request timeout (millisec)
           # Default: 1000
           timeout: 1000
 
