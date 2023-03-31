@@ -39,9 +39,6 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
-
-
-
  test-curl-action:
     name: "Perform REST API request"
     runs-on: ubuntu-latest
