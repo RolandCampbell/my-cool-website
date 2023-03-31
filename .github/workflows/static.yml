@@ -39,10 +39,17 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
-  curl:
+  test-curl-action:
+    name: "Perform REST API"
     runs-on: ubuntu-latest
     steps:
-    - name: curl
-      uses: wei/curl@master
-      with:
-        args:  "-X POST https://api-aqa.usablenet.com/v2.1/demous/a11y/tests/create  -H : 0@zG02a-UW9728eU-+3aN9YN2cN4hMb802NNNh12aj$FyzNYF1e^0_11 -H Content-Type: application/x-www-form-urlencoded -d projectid=TS258&rulesetid=wcag21auto&description=descritp&partid=T128094"
+      - name: "Call API 1"
+        uses: indiesdev/curl@v1.1
+        id: api
+        with:
+          url: https://api-aqa.usablenet.com/v2.1/demous/a11y/tests/create
+          method: "POST"
+          accept: 200,201,204
+          headers: '{ "X-Team": 0@zG02a-UW9728eU-+3aN9YN2cN4hMb802NNNh12aj$FyzNYF1e^0_11", "Content-Type": "application/x-www-form-urlencoded" }'
+          params: '{ "projectid": "TS258", "ruleset": "wcag21auto","description": "description", "partid": "T120094" }'
+          log-response: true
