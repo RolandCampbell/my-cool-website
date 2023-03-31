@@ -51,6 +51,6 @@ jobs:
           method: "POST"
           accept: 200,201,204
           headers: '{ "X-Team": "0@zG02a-UW9728eU-+3aN9YN2cN4hMb802NNNh12aj$FyzNYF1e^0_11", "Content-Type": "application/x-www-form-urlencoded" }'
-          params: '{ "projectid": "TS258", "ruleset": "wcag21auto","description": "description", "partid": "T120094" }'
+          params: '{ "projectid": "TS258", "ruleset": "wcag21auto","description": "description", "partid": "%2CT128094" }'
           log-response: true
           timeout: 10000
