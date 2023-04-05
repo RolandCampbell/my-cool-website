@@ -39,5 +39,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
-      - name: "Perform REST API call"
+      - name: "Perform REST API"
         run: curl -X POST   -H '{"X-Team":"0@zG02a-UW9728eU-+3aN9YN2cN4hMb802NNNh12aj$FyzNYF1e^0_11"}'  -H '{"Content-Type":"application/x-www-form-urlencoded"}' -d '{"projectid":"TS258","rulesetid":"wcag21auto","partid":"T128094"}' 'https://api-aqa.usablenet.com/v2.1/demous/a11y/tests/create'
