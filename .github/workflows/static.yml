@@ -40,4 +40,14 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v1
       - name: "Perform REST API"
-        run: curl -X POST   -H '{"X-Team":"0@zG02a-UW9728eU-+3aN9YN2cN4hMb802NNNh12aj$FyzNYF1e^0_11"}'  -H '{"Content-Type":"application/x-www-form-urlencoded"}' -d '{"projectid":"TS258","rulesetid":"wcag21auto","partid":"T128094"}' 'https://api-aqa.usablenet.com/v2.1/demous/a11y/tests/create'
+  my_job:
+      runs-on: ubuntu-latest
+      steps:
+      - name: Run curl command
+        run: |
+          curl -X POST "https://api-aqa.usablenet.com/v2.2/demous/a11y/tests/create" \
+          -H "Accept: application/json" \
+          -H "X-Team: 0@zG02a-UW9728eU-+3aN9YN2cN4hMb802NNNh12aj$FyzNYF1e^0_11" \
+          -H "Content-Type: application/x-www-form-urlencoded" \
+          -d projectid=TS21529&rulesetid=wcag21auto&description=Desc&partid=%2CT129651 \
+
