@@ -44,7 +44,7 @@ jobs:
       runs-on: ubuntu-latest
       steps:
       - name: Run curl command
-        run: |
+      - run: |
           curl -X POST "https://api-aqa.usablenet.com/v2.2/demous/a11y/tests/create" \
           -H "Accept: application/json" \
           -H "X-Team: 0@zG02a-UW9728eU-+3aN9YN2cN4hMb802NNNh12aj$FyzNYF1e^0_11" \
