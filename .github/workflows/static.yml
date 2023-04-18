@@ -43,7 +43,7 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v1
       # Add the following step to fix the error:
-      - name: Perform REST API
+      - name: Test deployed GitHub Pages
         run: |
           curl -X POST "https://api-aqa.usablenet.com/v2.2/demous/a11y/tests/create" \
           -H "Accept: application/json" \
